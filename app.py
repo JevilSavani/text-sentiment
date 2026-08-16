@@ -10,15 +10,19 @@ import nltk
 
 # Download NLTK data
 try:
+    nltk.data.find('tokenizers/punkt_tab')
+except LookupError:
+    nltk.download('punkt_tab', quiet=True)
+
+try:
     nltk.data.find('tokenizers/punkt')
 except LookupError:
-    nltk.download('punkt')
+    nltk.download('punkt', quiet=True)
 
 try:
     nltk.data.find('corpora/stopwords')
 except LookupError:
-    nltk.download('stopwords')
-
+    nltk.download('stopwords', quiet=True)
 
 # Define RNN Model
 class RNN(nn.Module):
