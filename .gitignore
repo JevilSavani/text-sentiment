@@ -16,8 +16,6 @@ env/
 .ipynb_checkpoints/
 
 # Local model and generated artifacts
-*.pth
-*.pkl
 *.joblib
 *.model
 
